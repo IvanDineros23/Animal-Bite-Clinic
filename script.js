@@ -66,6 +66,17 @@ function performSearch() {
         }
     });
     
+    // Search in about section
+    const aboutSection = document.querySelector('#about');
+    const aboutText = aboutSection.textContent.toLowerCase();
+    if (aboutText.includes(searchTerm)) {
+        searchResults.push({
+            type: 'About Information',
+            title: 'About Our Clinic',
+            section: 'about'
+        });
+    }
+    
     // Search in contact information
     const contactSection = document.querySelector('#contact');
     const contactText = contactSection.textContent.toLowerCase();
