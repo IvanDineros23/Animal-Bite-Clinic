@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Lorenzo Vaccination & Animal Bite Clinic</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="san lorenzo.jpg" alt="San Lorenzo Clinic Logo" class="logo-img">
+                San Lorenzo Vaccination & Animal Bite Clinic
+            </div>
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="Search services, information..." id="headerSearch">
+                <button class="search-btn" onclick="performSearch()">🔍</button>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#emergency">Emergency</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="employee-login-btn" onclick="openModal()">Employee Login</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Expert Animal Bite Care</h1>
+        <p>Immediate, professional treatment for animal bites and injuries. Our specialized clinic provides comprehensive care to prevent infection and ensure proper healing.</p>
+        <div class="cta-buttons">
+            <a href="#emergency" class="btn btn-primary">Emergency Care</a>
+            <a href="#services" class="btn btn-secondary">Our Services</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🚑</div>
+                <h3>Emergency Treatment</h3>
+                <p>Immediate care for severe animal bites, including wound cleaning, assessment, and initial treatment to prevent complications.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">💉</div>
+                <h3>Vaccination & Prevention</h3>
+                <p>Rabies vaccination, tetanus shots, and other preventive treatments based on the type of animal and bite severity.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🧬</div>
+                <h3>Infection Control</h3>
+                <p>Advanced wound care and antibiotic treatment to prevent bacterial infections and promote proper healing.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔬</div>
+                <h3>Testing & Analysis</h3>
+                <p>Comprehensive testing for diseases and pathogens that may be transmitted through animal bites.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🩹</div>
+                <h3>Wound Care</h3>
+                <p>Professional wound cleaning, suturing when necessary, and ongoing care to ensure optimal healing.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📋</div>
+                <h3>Follow-up Care</h3>
+                <p>Scheduled follow-up appointments to monitor healing progress and address any complications.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Section -->
+    <section class="emergency" id="emergency">
+        <h2>24/7 Emergency Care</h2>
+        <p>For severe animal bites and emergencies, call immediately:</p>
+        <div class="emergency-number">(555) 123-BITE</div>
+        <p>Open 24 hours a day, 7 days a week</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <div>
+                <h2>Contact Information</h2>
+                <div class="contact-info">
+                    <h3>📍 Location</h3>
+                    <p>123 Medical Center Drive<br>
+                    Healthcare District<br>
+                    City, State 12345</p>
+                    
+                    <h3>📞 Phone</h3>
+                    <p>Emergency: (555) 123-BITE<br>
+                    General: (555) 123-4567</p>
+                    
+                    <h3>⏰ Hours</h3>
+                    <p>Emergency: 24/7<br>
+                    Regular Clinic: Mon-Fri 8AM-6PM<br>
+                    Weekend: Sat-Sun 10AM-4PM</p>
+                </div>
+            </div>
+            <div>
+                <h2>When to Seek Care</h2>
+                <div class="contact-info">
+                    <h3>🚨 Immediate Emergency</h3>
+                    <ul>
+                        <li>Deep puncture wounds</li>
+                        <li>Severe bleeding</li>
+                        <li>Signs of infection</li>
+                        <li>Bites from unknown animals</li>
+                        <li>Bites to face, hands, or joints</li>
+                    </ul>
+                    
+                    <h3>📋 What to Bring</h3>
+                    <ul>
+                        <li>Insurance card</li>
+                        <li>Valid ID</li>
+                        <li>List of current medications</li>
+                        <li>Vaccination records (if available)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Animal Bite Clinic. All rights reserved. | Professional medical care for animal bite injuries.</p>
+    </footer>
+
+    <!-- Employee Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Employee Login</h2>
+            <form class="login-form" onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
