@@ -367,8 +367,8 @@ function resetForm() {
 // Logout function
 function logout() {
     if (confirm('Are you sure you want to logout?')) {
-        // Redirect to main homepage
-        window.location.href = 'homepage.html';
+        // Redirect to employee login page
+        window.location.href = 'employee-login.html';
     }
 }
 
