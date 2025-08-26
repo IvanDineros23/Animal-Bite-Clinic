@@ -68,6 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
     generateRegistrationNumber();
     loadPatientTable();
     setupEmployeeSearchBar();
+    initializeUserInfo();
 });
 
 // Update current date
@@ -447,6 +448,37 @@ function completeVaccination(registrationNumber) {
         alert('Vaccination marked as complete');
         // Update the UI or refresh the schedule
     }
+}
+
+// Initialize user information
+function initializeUserInfo() {
+    // Get user info from localStorage or use default
+    const currentUser = localStorage.getItem('currentUser') || 'Admin User';
+    const loginTime = localStorage.getItem('loginTime') || new Date().toLocaleTimeString('en-US', {
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true
+    });
+    
+    // Update user display
+    document.getElementById('currentUser').textContent = currentUser;
+    document.getElementById('loginTime').textContent = `Logged in: ${loginTime}`;
+    
+    // Set user initial (first letter of name)
+    const userInitial = currentUser.charAt(0).toUpperCase();
+    document.getElementById('userInitial').textContent = userInitial;
+}
+
+// Function to set user info (call this from login page)
+function setUserInfo(username) {
+    const loginTime = new Date().toLocaleTimeString('en-US', {
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true
+    });
+    
+    localStorage.setItem('currentUser', username);
+    localStorage.setItem('loginTime', loginTime);
 }
 
 // Reschedule appointment

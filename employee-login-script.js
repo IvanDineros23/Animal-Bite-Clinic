@@ -46,6 +46,25 @@ function handleEmployeeLogin(event) {
     setTimeout(() => {
         // Demo credentials - replace with actual authentication system
         if (employeeId.toLowerCase() === 'admin' && password === 'admin123') {
+            // Set user info in localStorage
+            const loginTime = new Date().toLocaleTimeString('en-US', {
+                hour: 'numeric',
+                minute: '2-digit',
+                hour12: true
+            });
+            
+            // Determine user display name based on employee ID
+            let userName = 'Admin User';
+            if (employeeId.toLowerCase() === 'admin') {
+                userName = 'Administrator';
+            } else {
+                // For other employee IDs, use a more user-friendly format
+                userName = employeeId.charAt(0).toUpperCase() + employeeId.slice(1).toLowerCase();
+            }
+            
+            localStorage.setItem('currentUser', userName);
+            localStorage.setItem('loginTime', loginTime);
+            
             showSuccessState(loginBtn);
             // Redirect to employee dashboard after success animation
             setTimeout(() => {
