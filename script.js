@@ -146,7 +146,7 @@ function displaySearchResults(results, searchTerm) {
 function highlightSection(element) {
     // Add a temporary highlight effect
     const originalBackground = element.style.backgroundColor;
-    element.style.backgroundColor = 'rgba(220, 38, 38, 0.1)';
+    element.style.backgroundColor = 'rgba(128, 0, 32, 0.1)';
     element.style.transition = 'background-color 0.3s ease';
     
     setTimeout(() => {
@@ -184,8 +184,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 window.addEventListener('scroll', function() {
     const header = document.querySelector('.header');
     if (window.scrollY > 100) {
-        header.style.background = 'linear-gradient(135deg, #b91c1c 0%, #991b1b 100%)';
+        header.style.background = 'linear-gradient(135deg, #5d001a 0%, #4a0015 100%)';
     } else {
-        header.style.background = 'linear-gradient(135deg, #dc2626 0%, #b91c1c 100%)';
+        header.style.background = 'linear-gradient(135deg, #800020 0%, #5d001a 100%)';
     }
 });
