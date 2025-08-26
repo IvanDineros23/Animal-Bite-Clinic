@@ -101,7 +101,6 @@ body {
     flex: 1;
     display: flex;
     justify-content: center;
-    max-width: 500px;
 }
 
 .header-right {
@@ -116,7 +115,6 @@ body {
     padding: 0.5rem;
     border: 1px solid #e0e0e0;
     width: 100%;
-    max-width: 400px;
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
@@ -526,7 +524,7 @@ body {
 
 .schedule-date {
     font-weight: bold;
-    color: #800020;
+    color: #dc2626;
     min-width: 120px;
 }
 
